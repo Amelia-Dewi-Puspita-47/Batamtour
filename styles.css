@@ -1,0 +1,998 @@
+/* Kontainer utama */
+.container {
+  display: flex;
+  flex-direction: column; /* Mengatur arah kolom untuk konten */
+  align-items: center; /* Menyusun konten secara horizontal di tengah */
+  justify-content: space-between; /* Memberikan ruang di antara konten */
+}
+
+.container1,
+.container2 {
+  width: 100%; /* Lebar kontainer sama dengan lebar layar */
+}
+
+/* Kontainer 1 dengan posisi relatif untuk overlay */
+.container1 {
+  position: relative; /* Mengatur posisi relatif untuk elemen di dalamnya */ 
+  display: inline-block; /* Menjadikan kontainer inline block */
+  width: 100%; /* Lebar kontainer */
+  height: auto; /* Tinggi kontainer menyesuaikan kontennya */
+}
+
+/* Overlay teks pada container1 */
+.text-overlay {
+  position: absolute; /* Mengatur posisi absolut untuk overlay teks */
+  top: 40%; /* Menempatkan teks di bagian atas 40% kontainer */
+  left: 32%; /* Menempatkan teks di bagian kiri 32% kontainer */
+  transform: translate(-50%, -50%); /* Menggeser teks ke tengah kontainer */
+  text-align: left; /* Penataan teks kiri */
+  color: white; 
+  -webkit-transform: translate(-50%, -50%); /* Transformasi untuk browser WebKit */
+  -moz-transform: translate(-50%, -50%); /* Transformasi untuk browser Mozilla */
+  -ms-transform: translate(-50%, -50%); /* Transformasi untuk browser Microsoft */
+  -o-transform: translate(-50%, -50%); /* Transformasi untuk browser Opera */
+}
+
+.text-overlay h2 {
+  margin-bottom: 10px; /* Jarak bawah antara teks */
+}
+
+.text-overlay p {
+  text-align: justify; /* Penataan teks rata kiri kanan */
+}
+
+/* Kontainer 2 dengan layout vertikal */
+.container2 {
+  display: flex;
+  flex-direction: column; /* Mengubah arah flex menjadi vertikal */ 
+  align-items: center; /* Menyusun elemen secara horizontal di tengah */
+  justify-content: space-between; /* Memberikan ruang di antara elemen (h1 dan p) */
+}
+
+.container2 h1 {
+  margin-bottom: 5px; /* Memberikan jarak di bawah h1 */ 
+}
+
+.container2 p {
+  text-align: center; /* Penataan teks rata tengah */
+  font-size: 15px;
+}
+
+/* Galeri album wisata */
+.albumwisata {
+  display: flex;
+  justify-content: center; /* Menyusun elemen di tengah secara horizontal */
+  flex-wrap: wrap; /* Mengatur agar elemen dapat melingkar saat terlalu banyak */
+  width: 90%; /* Lebar galeri album wisata */
+}
+
+/* Kartu foto dalam album wisata */
+.photo-card {
+  width: 20%; /* Lebar kartu foto */
+  height: auto; /* Tinggi kartu menyesuaikan konten */
+  margin: 20px; /* Jarak antara kartu */
+  border: 1px solid #ccc; /* Garis tepi kartu */
+  border-radius: 20px; /* Sudut bulat pada kartu */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan kartu */
+  background-color: #d2eae3; /* Warna latar belakang kartu */
+}
+
+.photo-card img {
+  width: 100%; /* Lebar gambar sesuai konten */
+  height: 200px; 
+  object-fit: cover; /* Menyesuaikan gambar agar pas dengan wadah */ 
+  border-top-right-radius: 20px; /* Sudut bulat kanan atas */
+  border-top-left-radius: 20px; /* Sudut bulat kiri atas */
+}
+
+/* Informasi dalam photo card */
+.info {
+  padding: 10px; /* Padding untuk informasi */
+}
+
+.info h2 {
+  margin-bottom: 5px; /* Jarak bawah antara elemen h2 */
+  font-size: 15px; /* Ukuran teks h2 */
+}
+
+.info hr {
+  margin-top: 0; /* Hapus margin atas garis */
+  margin-bottom: 10px; /* Jarak bawah garis */
+  border: 0; /* Hapus garis */
+  border-top: 1px solid #ccc; /* Tambahkan garis atas */
+}
+
+.info p {
+  font-size: 10px; /* Ukuran teks p */
+  line-height: 1.5; /* Tinggi baris */
+  text-align: justify; /* Penataan teks rata kiri kanan */
+}
+
+/* Tombol dalam photo card */
+.buttons {
+  display: flex; /* Menggunakan flexbox untuk penataan tombol */
+  margin-top: 10px; /* Jarak atas antara tombol */
+}
+
+.btn-lokasi {
+  display: flex;
+}
+
+.btn-lokasi button {
+  padding: 2px 5px; /* Padding pada tombol */
+  border: 1px solid #149a75; /* Garis tepi tombol */
+  border-radius: 3px; /* Sudut bulat pada tombol */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */
+  font-size: 10px; /* Ukuran teks tombol */
+  border-radius: 20px; /* Sudut bulat tombol */
+  background-color: #149a75; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  transition: color 0.3s ease; /* Transisi saat mengubah warna teks */
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.btn-lokasi button:hover {
+  background-color: #ffffff; /* Saat dihover, warna latar belakang menjadi putih */
+  color: #149a75; /* Warna teks berubah saat dihover */
+}
+
+.icon {
+  display: inline-block; /* Elemen tampil sebagai inline block */
+  width: 8px; /* lebar icon */
+  height: 11px; /* tinggi icon */
+  background-position: center; /* Posisi latar belakang di tengah */
+  background-size: cover; /* Mengatur ukuran latar belakang */
+  margin-right: 5px; /* Memberikan jarak antar icon dan text */
+}
+
+.btn-detail {
+  margin-left: 1%; /* Jarak kiri antara tombol detail */
+}
+
+.btn-detail button {
+  padding: 5px 5px; /* Padding pada tombol detail */
+  border: 1px solid #149a75; /* Garis tepi tombol detail */
+  border-radius: 3px; /* Sudut bulat pada tombol detail */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */
+  font-size: 10px; /* Ukuran teks tombol detail */
+  border-radius: 20px; /* Sudut bulat tombol detail */
+  background-color: transparent; /* Warna latar belakang transparan */
+  color: rgb(0, 0, 0); /* Warna teks tombol detail */
+  transition: color 0.3s ease; /* Transisi saat mengubah warna teks */
+}
+
+.btn-detail button:hover {
+  background-color: #ffffff; /* Saat dihover, warna latar belakang menjadi putih */
+  color: #149a75; /* Warna teks berubah saat dihover */
+}
+
+.btn-selengkapnya button {
+  color: #149a75; /* Warna teks tombol */
+  border: 2px solid #149a75; /* Garis tepi tombol */
+  background-color: transparent; /* Warna latar belakang transparan */
+  border-radius: 8px; /* Sudut bulat pada tombol */
+  padding: 5px 5px; /* Padding pada tombol */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */
+  transition: color 0.3s ease; /* Transisi saat mengubah warna teks */
+}
+
+.btn-selengkapnya button:hover {
+  color: #ffffff; /* Saat dihover, warna teks berubah menjadi putih */
+  border: 2px solid #ffff; /* Saat dihover, garis tepi menjadi putih */
+  background-color: #149a75; /* Saat dihover, warna latar belakang menjadi biru */
+  border-radius: 8px; /* Sudut bulat pada tombol */
+  padding: 5px 5px; /* Padding pada tombol */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */
+}
+
+/* Kontainer 3 */
+.container3 {
+  display: flex;
+  justify-content: center; /* Mengatur konten menjadi ditengah secara horizontal */
+  width: 100%; /* Lebar kontainer 100% dari lebar viewport */
+  background-color: #d5ede6; /* Warna latar belakang */
+  margin-top: 20px; /* Jarak atas antara kontainer sebelumnya */
+}
+
+/* Kontainer kiri dalam container3 */
+.con-left {
+  margin-left: 10%; /* Margin kiri kontainer */
+  margin-top: 20%; /* Margin atas kontainer */
+  margin-bottom: 22%; /* Margin bawah kontainer */
+  width: 50%; /* Lebar kontainer */
+}
+
+.con-left p {
+  font-size: 12px; /* Ukuran teks */
+  text-align: justify; /* Teks rata kiri dan kanan */
+  width: 98%; /* Lebar teks */
+}
+
+/* Kontainer kanan dalam container3 */
+.con-right {
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 55%;
+}
+
+.btn-selengkapnyadetail {
+  margin-top: 10%; /* Margin atas antara tombol dan konten */
+}
+
+.btn-selengkapnyadetail button {
+  color: #ffffff; /* Warna teks tombol */
+  background-color: #149a75; /* Warna latar belakang tombol */
+  border: 1px solid #149a75; /* Garis tepi tombol */
+  border-radius: 8px; /* Sudut bulat pada tombol */
+  padding: 5px 5px; /* Padding pada tombol */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */
+  transition: color 0.3s ease; /* Transisi saat mengubah warna teks */
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2); /* Bayangan tombol */
+}
+
+.btn-selengkapnyadetail button:hover {
+  color: #149a75; /* Warna teks berubah saat dihover */
+  border: 2px solid #149a75; /* Garis tepi berubah saat dihover */
+  background-color: transparent; /* Warna latar belakang transparan saat dihover */
+  border-radius: 8px; /* Sudut bulat pada tombol */
+  padding: 5px 5px; /* Padding pada tombol */
+  cursor: pointer; /* Kursor berubah saat diarahkan ke tombol */
+}
+
+/* Kontainer 4 */
+.container4 {
+  display: flex;
+  justify-content: center; /* Mengatur konten menjadi ditengah secara horizontal */
+  width: 100%; /* Lebar kontainer 100% dari lebar viewport */
+  margin-top: 20px; /* Jarak atas antara kontainer sebelumnya */
+}
+
+/* Kontainer 5 dengan layout vertikal */
+.container5 {
+  display: flex;
+  flex-direction: column; /* Mengubah arah flex menjadi vertikal */
+  align-items: center; /* Menempatkan elemen secara horizontal di tengah */
+  justify-content: space-between; /* Memberikan ruang di antara elemen (h1 dan p) */
+  background-color: #d5ede6;
+}
+
+.container5 h1 {
+  margin-top: 10%; /* Margin atas untuk judul */
+}
+
+.container5 p {
+  text-align: center; /* Teks rata tengah */
+}
+
+/* Album card dalam container5 */
+.albumcard {
+  display: flex;
+  justify-content: center; /* Mengatur konten menjadi ditengah secara horizontal */
+  flex-wrap: wrap; /* Mengatur konten agar wrap ke baris baru */
+  width: 90%; /* Lebar kontainer 90% dari lebar viewport */
+}
+
+/* Card dalam album */
+.card {
+  width: 20%;/* Lebar kartu */
+  height: auto; /* Tinggi kartu menyesuaikan konten */
+  margin: 20px; /* Margin antara kartu */
+  border: 1px solid #ccc; /* Garis tepi */
+  border-radius: 20px;/* Sudut bulat pada kartu */
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.1); /* Bayangan kartu */
+  background-color: #ffffff; /* Warna latar belakang kartu */
+  display: flex;
+  flex-direction: column; /* Susun elemen secara vertikal */
+  align-items: center; /* Menempatkan elemen secara horizontal di tengah */
+  justify-content: center; /* Menempatkan elemen secara vertikal di tengah */
+}
+
+.card img {
+  width: 70%; /* Lebar gambar dalam kartu */
+  height: auto; /* Tinggi gambar menyesuaikan konten */
+  border-top-right-radius: 20px; /* Sudut bulat pada sudut kanan atas */
+  border-top-left-radius: 20px;
+  margin-bottom: 10px; /* Memberikan jarak antara gambar dan teks */
+}
+
+.infocard {
+  text-align: center; /* Menempatkan teks di tengah; Teks rata tengah */
+}
+
+.infocard h2 {
+  margin-bottom: 0; /* Menghilangkan margin bawah default pada heading */
+}
+
+.albumcard button {
+  cursor: pointer;
+  transition: color 0.3s ease; /* Efek transisi saat mengubah warna teks */
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+}
+
+.albumcard button:hover {
+  box-shadow: 2px 30px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan saat tombol dihover */
+}
+
+/* Overlay teks pada container1 untuk wisata */
+.text-overlayWisata {
+  position: absolute;
+  top: 40%; /* Jarak dari atas */
+  left: 12%;
+  transform: translate(-50%, -50%); /* Menyelaraskan ke tengah secara horizontal dan vertikal */
+  text-align: left; /* Teks rata kiri */
+  color: #d2eae3; /* Warna teks */
+  font-size: 35px; /* Ukuran font */
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+/* Tombol "Selengkapnya" untuk Wisata */
+.btn-selengkapnyaWisata {
+  margin-right: 60%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  display: flex;
+  gap: 20px; /* Menambahkan jarak antara tombol */
+  justify-content: center; /* Menjaga tombol di tengah */
+}
+
+/* Tombol "Selengkapnya" untuk Wisata */
+.btn-selengkapnyaWisata button {
+  color: #149a75; /* Warna teks */
+  border: 2px solid #149a75; /* Garis tepi */
+  background-color: transparent; /* Warna latar belakang transparan */
+  border-radius: 8px; /* Sudut bulat pada tombol */
+  padding: 15px 45px; /* Padding tombol */
+  cursor: pointer;
+  font-size: 14px; /* Ukuran font */
+  transition: color 0.3s ease; /* Efek transisi saat mengubah warna teks */
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+}
+
+.btn-selengkapnyaWisata button:hover {
+  color: #ffffff;
+  border: 2px solid #ffff; /* Garis tepi saat dihover */
+  background-color: #149a75; /* Warna latar belakang saat dihover */
+  border-radius: 8px; /* Sudut bulat pada tombol saat dihover */
+  padding: 15px 45px; /* Padding tombol saat dihover */
+  cursor: pointer;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* Nama wisata */
+.namawisata h1 {
+  display: inline-block; /* Menjadikan elemen inline-block */
+  position: relative;
+  margin-bottom: 0; /* Menghapus margin bawah default */
+  color: #004935;
+  margin-left: 5%;
+}
+
+.namawisata h1:after {
+  content: ""; /* Menambahkan pseudo-element */
+  display: block; /* Menjadikan pseudo-element sebagai blok */
+  width: 100%; /* Lebar sesuai dengan panjang teks */
+  height: 2px; /* Tinggi garis bawah */
+  background-color: black; /* Warna garis bawah */
+  bottom: -5px; /* Jarak dari teks */
+  left: 0; /* Mulai dari sisi kiri */
+  margin-bottom: 3%; /* Margin bawah */
+}
+
+/* Lokasi wisata */
+.lokasi {
+  margin-top: 3%;
+  width: 80%;
+  height: auto; /* Tinggi otomatis */
+  display: flex; /* Menjadikan konten menjadi flexbox */
+  justify-content: center; /* Mengatur agar konten berada di tengah */
+  align-items: center; /* Mengatur agar elemen berada sejajar */
+  border: 1px solid #149a75; /* Garis tepi */
+  border-radius: 20px; /* Sudut bulat */
+  padding: 5px 5px; /* Padding */
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.lokasi p {
+  color: #525252;
+  font-size: 16px;
+  margin-left: 1%;
+}
+
+.btn-lokasiWisata {
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+/* Tombol "Lokasi" untuk Wisata */
+.btn-lokasiWisata button {
+  color: #149a75;
+  /*Warnateks*/border: 2px solid #149a75;
+  /*Garistepi*/background-color: transparent;
+  /*Warnalatarbelakangtransparan*/border-radius: 15px;
+  /*Sudutbulat*/padding: 10px 35px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  /*Efektransisisaatmengubahwarnateks*/-webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+}
+
+.btn-lokasiWisata button:hover {
+  color: #ffffff; /* Warna teks saat dihover */
+  border: 2px solid #ffff; /* Garis tepi saat dihover */
+  background-color: #149a75; /* Warna latar belakang saat dihover */
+  border-radius: 15px; /* Sudut bulat saat dihover */
+  padding: 10px 35px; /* Padding saat dihover */
+  cursor: pointer; 
+}
+
+.detail-wisata {
+  width: 90%; /* Mengatur lebar konten menjadi 90% dari lebar parent */
+  display: flex; /* Mengatur konten menjadi flexbox */
+  justify-content: flex-start; /* Mengatur konten agar diletakkan di awal sumbu utama (horizontal) */
+  align-items: center; /* Mengatur agar elemen berada sejajar secara vertikal */
+  margin-top: 1%; /* Margin atas sebesar 1% dari tinggi parent */
+  margin-left: 10%; /* Margin kiri sebesar 10% dari lebar parent */
+}
+
+.detail-wisata p {
+  margin: 0; /* Menghapus margin default dari paragraf */
+  margin-right: 10px; /* Menambahkan sedikit ruang antara elemen */
+}
+
+.tag {
+  border-radius: 15px; /* Sudut bulat untuk tag */
+  background-color: #149a75; /* Warna latar belakang tag */
+  color: white; /* Warna teks tag */
+  padding: 5px 10px; /* Padding untuk penampilan yang lebih baik */
+  margin-right: 20px; /* Jarak antara tag dengan elemen lain di sebelah kanan */
+  display: flex; /* Menjadikan elemen sebagai flexbox */
+  width: 15%; /* Lebar elemen */
+}
+
+.tag p {
+  margin: 0; /* Menghapus margin default */
+  margin-left: 2%; /* Margin kiri untuk teks di dalam tag */
+}
+
+.informasiwisata {
+  margin-left: 10%; /* Menetapkan margin kiri sebesar 10% dari lebar elemen induk */
+  margin-top: 5%; /* Menetapkan margin atas sebesar 5% dari tinggi elemen induk */
+  width: 87%; /* Menetapkan lebar elemen sebesar 87% dari lebar elemen induk */
+}
+.informasiwisata h1 {
+  margin-bottom: 0; /* Menghapus margin bawah default */
+}
+
+.informasiwisata p {
+  text-align: justify; /* Teks rata kiri kanan */
+  font-size: 12px;
+}
+
+.timeprice {
+  display: flex;
+  align-items: center; /* Mengatur agar elemen berada di tengah secara vertikal */
+  width: 50%; /* Lebar konten */
+  height: auto; /* Tinggi otomatis */
+}
+
+.timeprice img {
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap; /* Mengatur agar konten terbungkus secara responsif */
+  gap: 10px; /* Jarak antara elemen */
+}
+
+.pht-card {
+  flex: 1 1 calc(33.33% - 10px); /* Mengatur ukuran kartu */
+  box-sizing: border-box; /* Mendefinisikan kotak model */
+  border: 1px solid #ddd; /* Garis tepi */
+  border-radius: 4px; /* Sudut bulat */
+  overflow: hidden; /* Mengatur agar konten yang melebihi batas terpotong */
+  transition: transform 0.2s; /* Efek transisi saat hover */
+}
+.pht-card img {
+  width: 100%;
+  height: 200px; /* menetapkan tinggi untuk semua gambar */
+  object-fit: cover; /* Memastikan gambar menutupi area yang tersedia */
+}
+
+.pht-card:hover {
+  transform: scale(1.05); /* Efek perbesaran saat dihover */
+}
+
+.blog {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.blog-card {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ddd; /* Garis tepi dengan warna abu-abu */
+  border-radius: 5px; /* Sudut bulat pada bagian luar */
+  overflow: hidden; /* Mengatur agar konten yang melebihi batas terpotong */
+  width: 80%; /* Lebar kartu blog */
+  margin-left: 10%; /* Memberikan margin kiri sebesar 10% */
+  border-radius: 15px; /* Sudut bulat pada bagian luar */
+  box-shadow: 20px 15px 50px rgba(0, 0, 0, 0.1); /* Efek bayangan dengan warna abu-abu */
+}
+
+.img-blog {
+  width: 30%; /* Lebar gambar pada bagian img-blog */
+}
+
+.img-blog img {
+  width: 100%;
+  height: auto; /* Tinggi gambar disesuaikan secara otomatis */
+}
+
+.content-blog {
+  padding: 20px; /* Padding sebesar 20px */
+  width: 50%; /* Lebar konten blog 50% */
+}
+
+.content-blog h2 {
+  margin-top: 0; /* Menghapus margin atas pada judul */
+}
+
+.content-blog p {
+  margin-top: 8%; /* Margin atas sebesar 8% untuk paragraf */
+  font-size: 12px; /* Ukuran font paragraf */
+}
+
+/* Gaya untuk tombol "Baca Selengkapnya" */
+.read-more {
+  display: inline-block; /* Menjadikan tombol inline-block */
+  padding: 8px 16px; /* Padding pada tombol */
+  background-color: #149b76; /* Warna latar belakang */
+  color: #fff; /* Warna teks */
+  text-decoration: none; /* Menghapus garis bawah default */
+  border-radius: 5px; /* Sudut bulat */
+  transition: transform 0.3s; /* Efek transisi */
+  box-shadow: 20px 15px 50px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+/* Efek saat tombol dihover */
+.read-more:hover {
+  background-color: #ffff; /* Warna latar belakang saat dihover */
+  color: #149b76; /* Warna teks saat dihover */
+  border: 1px solid #149b76; /* Garis tepi saat dihover */
+}
+
+/* Konten sebelah kiri di dalam blog */
+.blog-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Menyusun anak-anaknya ke tengah */
+  gap: 20px; /* Jarak antara elemen-elemen */
+  width: 65%; /* Lebar konten */
+  margin: auto; /* Untuk membuatnya berada di tengah */
+}
+
+/* Gambar di dalam konten wisata */
+.pic-wisata img {
+  max-width: 100%; /* Lebar maksimum gambar */
+  height: auto; /* Tinggi otomatis */
+  display: block; /* Menghilangkan whitespace di bawah gambar */
+  margin: auto; /* Untuk memastikan gambar rata tengah */
+}
+
+/* Konten teks di dalam konten wisata */
+.content-wisata {
+  text-align: justify; /* Untuk menjustifikasi teks */
+  margin: auto; /* Untuk memastikan teks rata tengah */
+}
+
+.namaBlog h1 {
+  position: relative; /* Mengatur posisi relatif */
+  display: inline-block; /* Menjadikan elemen inline-block */
+  color: #004935; /* Warna teks */
+}
+
+.namaBlog h1::after {
+  content: ""; /* Menggunakan pseudo-element */
+  display: block; /* Menjadikan pseudo-element sebagai blok */
+  width: 100%; /* Lebar sesuai dengan panjang teks */
+  height: 1px; /* Tinggi garis bawah */
+  background-color: #004935; /* Warna garis bawah */
+  position: absolute; /* Posisi absolut */
+  bottom: -5px; /* Jarak dari teks */
+  left: 0; /* Mulai dari sisi kiri */
+}
+
+.namaBlog p {
+  margin-top: 10px; /* Jarak antara judul dan tanggal */
+}
+
+.text-overlayBlog {
+  position: absolute;
+  top: 40%; /* Jarak dari atas */
+  left: 28%; /* Jarak dari kiri */
+  transform: translate(-50%, -50%); /* Menggeser elemen ke tengah */
+  text-align: left; /* Teks rata kiri */
+  color: #d2eae3; /* Warna teks */
+  font-size: 35px; /* Ukuran font */
+  width: 50%; /* Lebar */
+}
+
+.content-detailblog {
+  text-align: justify; 
+  margin: auto; /* Untuk memastikan teks rata tengah */
+  width: 100%;
+  display: flex; /* Menjadikan konten sebagai flexbox */
+}
+
+.content-detailblog p {
+  font-size: 13px;
+}
+
+.content-author {
+  margin-left: 2%;
+  margin-bottom: 5%;
+}
+
+.blog-right {
+  width: 300px; 
+  max-height: 800px; 
+  overflow-y: auto; /* Mengatur agar terdapat scrollbar vertikal jika konten melebihi tinggi maksimal */
+  border: 1px solid #ccc; /* Garis tepi 1px solid warna abu-abu */
+  padding: 10px; /* Padding 10px di dalam kotak */
+  margin-top: 5%; /* Margin atas 5% */
+  border-radius: 15px; /* Sudut bulat 15px */
+  border: 1px solid #149a75; /* Garis tepi 1px solid warna hijau */
+  margin-right: 2%; /* Margin kanan sebesar 2% */
+}
+
+.blog-right h3 {
+  color: #149a75;
+  margin-left: 35%;
+}
+
+.card-berita-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Jarak antara elemen 10px */
+}
+
+.card-berita {
+  display: flex;
+  flex-direction: column; /* Menjadikan konten tata letak kolom */
+  align-items: center; /* Mengatur agar konten berada di tengah */
+  border: 1px solid #ccc; /* Garis tepi 1px solid warna abu-abu */
+  padding: 10px; /* Padding 10px di dalam kotak */
+  border-radius: 5px; /* Sudut bulat 5px */
+  text-decoration: none; /* Menghapus garis bawah dari tautan */
+  color: inherit; /* Mewarisi warna teks dari induk */
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.card-berita img {
+  width: 100%; /* Lebar gambar 100% dari lebar kotak */
+  height: auto; /* Tinggi gambar disesuaikan agar proporsi gambar tidak terdistorsi */
+  border-bottom: 1px solid #ccc; /* Garis bawah 1px solid warna abu-abu */
+  padding-bottom: 10px; /* Padding bawah 10px */
+  margin-bottom: 10px; /* Margin bawah 10px */
+}
+
+.card-berita h2 {
+  font-size: 1.2em; /* Ukuran font 1.2 kali ukuran font standar */
+  text-align: center; /* Teks berada di tengah */
+  margin: 0; /* Menghapus margin bawaan */
+}
+
+.card-berita:hover {
+  background-color: #d2eae3; 
+  cursor: pointer;
+}
+
+.containerblog {
+  display: flex;
+  width: 100%; /* Lebar kontainer diatur 100% dari lebar viewport */
+}
+
+.tentang-website {
+  display: flex;
+  width: 90%; /* Lebar kontainer diatur 90% dari lebar parent */
+}
+
+.pmv {
+  padding: 20px; /* Memberikan padding sebesar 20px di dalam kontainer */
+  width: 30%; /* Lebar kontainer diatur 30% dari lebar parent */
+}
+
+.pmv p {
+  text-align: justify;
+  font-size: 12px;
+}
+
+.user-card {
+  background-color: #fff; /* Warna latar belakang diatur putih */
+  border-radius: 10px; /* Border radius diatur 10px untuk sudut yang melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan ditambahkan */
+  padding: 15px; /* Padding sebesar 15px di dalam card */
+  text-align: center; /* Teks diatur rata tengah */
+  width: 150px; /* Lebar card diatur 150px */
+  margin: 10px; /* Margin sebesar 10px di sekeliling card */
+}
+
+.photo-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto; /* Mengatur margin secara otomatis pada sumbu horizontal */
+  overflow: hidden; /* Overflow diatur menjadi tersembunyi */
+  border-radius: 50%; /* Border radius diatur 50% untuk membuatnya bundar */
+  border: 5px solid #ddd; /* Border dengan ketebalan 5px dan warna #ddd */
+}
+
+.photo-container img {
+  width: 100%; /* Lebar gambar diatur 100% agar sesuai dengan lebar kontainer */
+  height: auto; /* Tinggi gambar diatur otomatis agar proporsional dengan lebar */
+}
+
+.profile-photo {
+  width: 100%; /* Lebar foto profil diatur 100% agar sesuai dengan lebar kontainer */
+  height: auto; /* Tinggi foto profil diatur otomatis agar proporsional dengan lebar */
+}
+
+.name {
+  font-size: 1.5em; /* Ukuran font diatur 1.5em */
+  margin: 15px 0 5px 0; /* Margin atas 15px, margin bawah 5px */
+}
+
+.job-title {
+  color: #777;
+  margin: 0 0 20px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center; /* Menyusun ikon sosial di tengah secara horizontal */
+  gap: 15px; /* Jarak antara ikon sosial sebesar 15px */
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s; /* Efek transisi saat digerakkan */
+}
+
+.social-icon img:hover {
+  transform: scale(1.2);
+}
+
+.con-temuikami {
+  width: 100%;
+  background-color: #d2eae3;
+  display: flex;
+  flex-direction: column; /* Menjadikan elemen berorientasi kolom */
+  align-items: center; /* Menyusun anak-anaknya di tengah secara horizontal */
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.con-temuikami h2 {
+  color: #525252;
+  margin-top: 10%;
+}
+
+.list-user {
+  display: flex;
+  justify-content: space-between; /* Membuat jarak yang sama antara elemen-elemen */
+  flex-wrap: wrap; /* Mengatur agar elemen-elemen bisa melintasi baris jika perlu */
+  gap: 20px; /* Jarak antara elemen-elemen sebesar 20px */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .text-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .text-overlay h1 {
+    font-size: 15px;
+  }
+
+  .text-overlay p {
+    font-size: 8px;
+  }
+
+  .container2 h1 {
+    font-size: 25px;
+  }
+
+  .container2 p {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .photo-card {
+    width: calc(50% - 40px); /* Dua kartu per baris dengan jarak */
+  }
+
+  .buttons {
+    flex-direction: column; /* Mengatur tombol menjadi kolom */
+  }
+
+  .btn-lokasi,
+  .btn-detail {
+    margin-bottom: 10px; /* Menambahkan jarak antar tombol */
+  }
+  .text-overlayWisata {
+    left: 15%;
+    font-size: 15px;
+  }
+  .btn-selengkapnyaWisata {
+    margin-right: 0%;
+  }
+  .pic-wisata img {
+    width: 100%;
+  }
+  .lokasi img {
+    width: 30%;
+    height: 15%;
+  }
+  .lokasi p {
+    font-size: 10px;
+  }
+  .tag p {
+    font-size: 10px;
+  }
+  .text-overlayBlog {
+    left: 30%;
+    font-size: 15px;
+  }
+  .namaBlog h1 {
+    font-size: 12px;
+    color: #004935;
+  }
+  .blog-left {
+    margin-left: 5%;
+  }
+  .blog-right {
+    width: 30%;
+    margin-left: 5%;
+  }
+  .card-berita h2 {
+    font-size: 10px;
+  }
+  .pmv {
+    padding: 5px;
+    width: 100%;
+  }
+  .pmv h2 {
+    text-align: justify;
+    font-size: 15px;
+    margin-left: 15%;
+  }
+  .pmv p {
+    text-align: justify;
+  }
+  .list-user {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-overlay {
+    top: 60%;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .text-overlay h1 {
+    font-size: 15px;
+  }
+
+  .text-overlay p {
+    font-size: 8px;
+    text-align: center;
+  }
+
+  .container2 h1 {
+    font-size: 25px;
+  }
+
+  .container2 p {
+    text-align: center;
+    font-size: 11px;
+  }
+
+  .photo-card {
+    width: calc(100% - 40px); /* Satu kartu per baris dengan jarak */
+  }
+
+  .info h2 {
+    font-size: 1.2em;
+  }
+
+  .info p {
+    font-size: 0.9em;
+  }
+
+  .btn-lokasi button,
+  .btn-detail button {
+    font-size: 0.9em;
+  }
+  .text-overlayWisata {
+    left: 15%;
+    font-size: 15px;
+  }
+  .btn-selengkapnyaWisata {
+    margin-right: 0%;
+  }
+  .lokasi img {
+    width: 30%;
+    height: 15%;
+  }
+  .lokasi p {
+    font-size: 10px;
+  }
+  .tag p {
+    font-size: 10px;
+  }
+  .text-overlayBlog {
+    left: 30%;
+    font-size: 15px;
+  }
+  .namaBlog h1 {
+    font-size: 12px;
+    color: #004935;
+  }
+  .blog-left {
+    margin-left: 5%;
+  }
+  .blog-right {
+    width: 30%;
+    margin-left: 5%;
+  }
+  .card-berita h2 {
+    font-size: 10px;
+  }
+}
